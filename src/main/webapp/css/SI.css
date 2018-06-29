@@ -1,0 +1,29 @@
+.phone {
+    font-size: 30px;
+    margin-top: 60px;;
+}
+.phone * {
+    margin-left: 5px;
+}
+.phone input {
+    font-size: 30px;
+    line-height: 34px;
+}
+.phone button {
+    font-size: 26px ;
+    width: 100px;
+}
+#table {
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 24px;
+}
+#table td {
+    padding: 10px;
+}
+#table button {
+    font-size: 18px;
+}
+.red {
+    color: red;
+}

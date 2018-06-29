@@ -1,0 +1,58 @@
+#messdiv {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.27);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#messdiv .messbot button{
+    width: 150px;
+    margin-left: 66.6666px;
+    border-radius: 5px;
+    height: 50px;
+}
+#mess{
+    width: 500px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -250px;
+    padding-bottom: 16px;
+}
+#mess input {
+    line-height: 34px;
+    font-size: 30px;
+}
+#mess .error {
+    font-size: 20px;
+}
+#mess .hurdle {
+    background-color: #eee;
+    padding: 3px 0;
+}
+#mess .hurdle p{
+    width: 40px;
+    font-size: 30px;
+    text-align: center;
+    border-left:1px solid #000;
+    line-height:40px;
+}
+#messdiv .content {
+    padding: 10px 10px;
+}
+#message{
+    box-sizing: inherit;
+    border: 2px solid;
+    border-color: #999999;
+    height: 200px;
+    width: 456px;
+    padding: 0 10px;
+    line-height: 130%;
+    font-size: 30px;
+}
+#close:hover {
+    cursor: pointer;
+}

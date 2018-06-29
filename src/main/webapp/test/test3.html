@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../scripts/jquery-1.12.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("form").submit(function(){
+                return false;
+            });
+            $("form").submit(function(){
+                var fields = $("select, :radio").serializeArray();
+                jQuery.each( fields, function(i, field){
+                    $("#results").append(field.value + "|" + field.name + " ");
+                });
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+<p id="results"><b>Results:</b> </p>
+<form action="#">
+    <select name="single" id="123">
+        <option>Single</option>
+        <option>Single2</option>
+    </select>
+    <select name="multiple" multiple="multiple"  id="1234">
+        <option selected="selected">Multiple</option>
+        <option>Multiple2</option>
+        <option selected="selected">Multiple3</option>
+    </select><br/>
+    <input type="checkbox" name="check" value="check1"  id="12345"/> check1
+    <input type="checkbox" name="check" value="check2" checked="checked"  id="123456"/> check2
+    <input type="radio" name="radio" value="radio1" checked="checked"  id="1234567"/> radio1
+    <input type="radio" name="radio" value="radio2" id="12345678"/> radio2
+    <button type="submit" id="button">start</button>
+</form>
+</body>
+</html>

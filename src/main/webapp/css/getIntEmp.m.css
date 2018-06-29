@@ -1,0 +1,111 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    /*设置所有的都是以边框开始计算宽度  百分比*/
+    -webkit-box-sizing: border-box;/*兼容*/
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    width: 100%;
+    margin: 0 auto;
+    background: url("../images/logo.png") no-repeat left 20px center;
+    -webkit-background-size: 60px 60px;
+    background-size: 60px 60px;
+    text-align: right;
+    height: 60px;
+    padding-top: 34px;
+    padding-left: 60px;
+    padding-right: 20px;
+    font-size: 26px;
+}
+a:link a:visited {
+    color: black;
+}
+body {
+    padding-top: 20px;
+}
+.hidden {
+    display: none;
+}
+.div1 {
+    width: 100%;
+    max-width: 640px;/*设计图的原因  不然它放大*/
+    min-width: 300px;/*为了更好的布局*/
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.div1 form {
+    margin-top: 10px;
+    font-size: 20px;
+}
+.div1 form input {
+    font-size: 20px;
+    padding: 0 10px;
+    padding-left: 56px;
+    width: 96%;
+    height: 40px;
+    border: 1px solid #0d09ff;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #fff;
+    background: url("../images/bianhao.png") no-repeat left center;
+    -webkit-background-size: 50px 20px;
+    background-size: 50px 20px;
+}
+.div1 form input:hover {
+    border: 1px solid #4c82ff;
+}
+.div1 form button {
+    position: relative;
+    top: 1px;
+    margin: 10px auto;
+    width: 47.3%;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #0d09ff;
+    border-radius: 5px;
+}
+
+.div1 ul {
+    border: 1px solid #fff;
+    list-style: none;
+    overflow: hidden;
+}
+.div1 li {
+    float: left;
+    width: 33.33333%;
+    border: 1px solid #ffffff;
+    height: 0;
+    padding-bottom: 30%;
+    background-color: #aaa;
+    position: relative;
+}
+.div1 li:last-child {
+    width: 66.6666%;
+    padding-bottom: 30%;
+}
+.div1 li:last-child div {
+    padding-top: 20%;
+}
+.div1 li div{
+    width: 100%;
+    height: 100%;
+    padding-top: 50%;
+    position: absolute;
+    font-size: 80px;
+}
+.div1 li div:active {
+    background-color: white;
+}
+.div1 li div span {
+    position: relative;
+    display: block;
+    height: 80px;
+    top: -50px;
+}

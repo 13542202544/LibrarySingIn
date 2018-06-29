@@ -1,0 +1,36 @@
+.checkbox {
+    float: left;
+    width: 110px;
+    text-align: left;
+}
+#choice li {
+    overflow: hidden;
+    color: #fff;
+    font-size: 16px;
+    line-height: 28px;
+    background-color: rgb(0, 71, 146);
+    border-bottom: 1px solid white;
+}
+.genre {
+    width: 80px;
+    max-height: 100px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+}
+.option {
+    overflow: hidden;
+    background-color: rgb(68, 148, 212);
+    padding-left: 10px;
+    color: #ffffff;
+}
+.div_view {
+    border: 0;
+    margin-top: 8px;
+}
+.submit {
+    width: 100px;
+    height: 26px;
+    position: relative;
+    top: 1px;
+}

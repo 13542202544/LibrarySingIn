@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas*10</title>
+</head>
+<body>
+<canvas id="can1" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can2" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can3" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can4" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can5" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can6" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can7" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can8" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can9" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="can0" width="400" height="400" style="border: 4px solid red"></canvas>
+<canvas id="cana" width="400" height="400" style="border: 4px solid red"></canvas>
+<script>
+	var ctx1=document.getElementById("can1").getContext("2d")
+	var ctx2=document.getElementById("can2").getContext("2d")
+	var ctx3=document.getElementById("can3").getContext("2d")
+	var ctx4=document.getElementById("can4").getContext("2d")
+	var ctx5=document.getElementById("can5").getContext("2d")
+	var ctx6=document.getElementById("can6").getContext("2d")
+	var ctx7=document.getElementById("can7").getContext("2d")
+	var ctx8=document.getElementById("can8").getContext("2d")
+	var ctx9=document.getElementById("can9").getContext("2d")
+	var ctx0=document.getElementById("can0").getContext("2d")
+	var ctxa=document.getElementById("cana").getContext("2d")
+
+	function timer(){
+		ctx1.translate(50,50)
+		ctx1.lineWidth=6
+		ctx1.strokeStyle="green"
+		ctx1.strokeRect(0,0,300,200);
+
+		ctx2.translate(50,50)
+		ctx2.lineWidth=6
+		ctx2.strokeStyle="green"
+		ctx2.fillRect(0,0,300,200);
+
+		ctx3.lineWidth=10
+		ctx3.beginPath()
+		ctx3.translate(50,50)
+		ctx3.strokeStyle="red"
+		ctx3.lineWidth=6
+		ctx3.moveTo(0,0)
+		ctx3.lineTo(300,200)
+		ctx3.moveTo(300,0)
+		ctx3.lineTo(0,200)
+		ctx3.stroke()
+		ctx3.closePath()
+		ctx3.strokeStyle="greenyellow"
+		ctx3.strokeRect(0,0,300,200);
+
+		ctx4.lineWidth=10
+		ctx4.beginPath()
+		ctx4.translate(50,10)
+		ctx4.strokeStyle="red"
+		ctx4.lineWidth=6
+		for (var i=0;i<10;i++){
+			ctx4.moveTo(0,i*38)
+			ctx4.lineTo(300,i*38)
+		}
+		ctx4.stroke()
+		ctx4.closePath()
+		ctx4.strokeStyle="greenyellow"
+		ctx4.strokeRect(0,0,300,380);
+
+
+		ctx5.translate(50,50)
+		ctx5.strokeStyle="red"
+		ctx5.lineWidth=6
+		ctx5.moveTo(149,0)
+		ctx5.lineTo(300,200)
+		ctx5.lineTo(0,200)
+		ctx5.lineTo(151,0)
+		ctx5.stroke()
+		ctx5.closePath()
+
+		ctx6.translate(50,50)
+		ctx6.strokeStyle="black"
+		ctx6.lineWidth=6
+		ctx6.moveTo(0,0)
+		ctx6.lineTo(300,0)
+		ctx6.lineTo(300,200)
+		ctx6.lineTo(0,200)
+		ctx6.lineTo(0,-3)
+		ctx6.moveTo(0,1)
+		ctx6.lineTo(150,90)
+		ctx6.lineTo(300,0)
+		ctx6.stroke()
+		ctx6.closePath()
+
+		ctx7.translate(50,50)
+		ctx7.strokeStyle="black"
+		ctx7.lineWidth=6
+		ctx7.moveTo(0,0)
+		ctx7.lineTo(300,0)
+		ctx7.lineTo(300,200)
+		ctx7.lineTo(270,200)
+		ctx7.lineTo(270,270)
+		ctx7.lineTo(200,200)
+		ctx7.lineTo(0,200)
+		ctx7.lineTo(0,-3)
+		ctx7.stroke()
+		ctx7.closePath()
+
+		ctx8.translate(50,50)
+		ctx8.strokeStyle="black"
+		ctx8.lineWidth=6
+		ctx8.moveTo(0,350)
+		ctx8.lineTo(0,0)
+		ctx8.lineTo(200,0)
+		ctx8.lineTo(200,100)
+		ctx8.lineTo(0,100)
+		ctx8.moveTo(0,200)
+		ctx8.lineTo(200,200)
+		ctx8.lineTo(200,348 )
+		ctx8.lineTo(0,348)
+//		ctx8.moveTo(100,100)
+//		ctx8.lineTo(100,200)
+		ctx8.stroke()
+		ctx8.closePath()
+
+		ctx9.beginPath()
+		ctx9.strokeStyle="greenyellow"
+		ctx9.arc(200,200,180,0,Math.PI*2)
+		ctx9.lineWidth=5
+		ctx9.stroke()
+		ctx9.closePath()
+		ctx9.beginPath()
+		ctx9.lineWidth=5
+		ctx9.strokeStyle="red"
+		ctx9.moveTo(100,130)
+		ctx9.lineTo(300,270)
+		ctx9.moveTo(100,270)
+		ctx9.lineTo(300,130)
+		ctx9.stroke()
+		ctx9.closePath()
+
+		ctx0.beginPath()
+		ctx0.lineWidth=1
+		ctx0.strokeStyle="black"
+		for(var i=1;i<20;i++){
+			ctx0.moveTo(0,i*20)
+			ctx0.lineTo(400,i*20)
+			ctx0.moveTo(i*20,0)
+			ctx0.lineTo(i*20,400)
+		}
+		ctx0.stroke()
+		ctx0.closePath()
+
+		ctxa.beginPath()
+		for(var i=1;i<=10;i++){
+			ctxa.lineWidth=(11-i)
+			ctxa.strokeStyle="black"
+			ctxa.arc(200,200,i*20,0,Math.PI*2)
+			ctxa.stroke()
+		}
+		ctxa.closePath()
+	}
+
+	timer();
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    /*设置所有的都是以边框开始计算宽度  百分比*/
+    -webkit-box-sizing: border-box;/*兼容*/
+    box-sizing: border-box;
+}
+.tar {
+    text-align: right;
+}
+.tal {
+    text-align: left;
+}
+body {
+    padding-top: 20px;
+}
+.div1 {
+    width: 100%;
+    max-width: 640px;/*设计图的原因  不然它放大*/
+    min-width: 300px;/*为了更好的布局*/
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    width: 300px;
+    margin: 0 auto;
+    background: url("/LibrarySingIn-8/images/logo.png") no-repeat;
+    -webkit-background-size: 60px 60px;
+    background-size: 60px 60px;
+    text-align: center;
+    height: 60px;
+    padding-top: 34px;
+    padding-left: 60px;
+    font-size: 26px;
+}
+h2 {
+    width: 300px;
+    margin: 10px auto;
+    margin-top: 30px;
+    background: url("/LibrarySingIn-8/images/correct.png") no-repeat top center;
+    -webkit-background-size:50px 50px;
+    background-size:50px 50px;
+    text-align: center;
+    padding-top: 50px;
+}
+h2 p {
+    font-size: 40px;
+    color: #5c56ff;
+}
+h2 span {
+    font-size: 14px;
+    font-weight:400;
+}
+img {
+    width: 300px;
+}

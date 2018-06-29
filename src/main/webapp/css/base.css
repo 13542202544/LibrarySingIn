@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 14px;
+}
+.div1 {
+    width: 900px;
+    margin:0 auto;
+    text-align:center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:link a:visited {
+    color: black;
+}
+ul {
+    list-style: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.oh {
+    overflow: hidden;
+}
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.nav {
+    margin-bottom: 5px;
+    padding: 3px 0;
+    border-bottom: 2px solid #003E83;
+}
+.nav a {
+    width: 70px;
+    height: 70px;
+    background: url(../images/logo.png) no-repeat center;
+    -webkit-background-size: 70px 70px;
+    background-size: 70px 70px;
+}
+.nav h1 {
+    font-size: 50px;
+    color: #003E83;
+    position: relative;
+    top: 12px;
+    margin-right: 5px;
+}
+.db {
+    display: block;
+}
+.dn {
+    display: none;
+}
+.error {
+    color: red;
+}

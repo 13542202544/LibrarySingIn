@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                            http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+                            http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+                            http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+                            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+                            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+    <!-- 配置自动扫描的包 -->
+    <context:component-scan base-package="com.library.controller,com.library.service,com.library.dao,com.library.model"/>
+
+    <!-- 配置视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 配置security (用户权限) -->
+    <!-- 配置地址访问权限 -->
+    <security:http auto-config="true" use-expressions="true">
+        <security:intercept-url pattern="/**/**" access="permitAll" />
+    </security:http>
+
+    <!-- 配置用户的权限 -->
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="admin" password="admin" authorities="ROLE_SUPER" />
+            </security:user-service>
+        </security:authentication-provider>
+        <security:authentication-provider user-service-ref='myUserDetailsService'/>
+    </security:authentication-manager>
+
+    <!-- @Secured 注解 -->
+    <!--<security:global-method-security secured-annotations="enabled"/>-->
+    <!-- 启用@PreAuthorize和@PostAuthorize -->
+    <security:global-method-security pre-post-annotations="enabled"/>
+    <mvc:annotation-driven/>
+
+    <mvc:default-servlet-handler/>
+
+
+    <!-- 配置Spring注解@Aspectj -->
+    <aop:aspectj-autoproxy />
+
+    <!-- 配置hibernate相关 -->
+    <!-- 导入资源文件 -->
+    <context:property-placeholder location="classpath:db.properties" />
+
+    <!-- 配置 C3P0 数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="user" value="${jdbc.user}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+        <property name="driverClass" value="${jdbc.driverClass}"></property>
+        <property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+
+        <property name="initialPoolSize" value="${jdbc.initPoolSize}"></property>
+        <property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+    </bean>
+
+    <!-- 配置 SessionFactory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+            </props>
+        </property>
+
+        <!-- 自动扫描hbm方式配置的hibernate文件和.hbm文件 -->
+        <property name="packagesToScan" value="com.library" />
+    </bean>
+
+    <!-- 配置 Spring 的声明式事务 -->
+    <!-- 1. 配置 hibernate 的事务管理器 -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <!-- 2. 配置事务属性 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true" />
+            <tx:method name="lastNameIsValid" read-only="true" />
+            <tx:method name="*" />
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 3. 配置事务切入点, 再把事务属性和事务切入点关联起来 -->
+    <aop:config>
+        <aop:pointcut expression="execution(* com.library.service.*.*(..))"
+                      id="txPointcut" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
+    </aop:config>
+
+</beans>

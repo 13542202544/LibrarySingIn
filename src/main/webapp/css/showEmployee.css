@@ -1,0 +1,89 @@
+.chick {
+    background-color: #78ffb0;
+}
+ul {
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    list-style: none;
+    color: #FFFFFF;
+}
+.center {
+    display: inline-block;
+}
+ul:nth-child(2n+1) {
+    background-color: #69AEE6;
+}
+ul:nth-child(2n) {
+    background-color: #4494D4;
+}
+ul:nth-child(2){
+    font-weight: 700;
+    background-color: #004792;
+    font-size: 16px;
+}
+li {
+    float: left;
+    line-height: 20px;
+    margin: 10px 5px;
+    text-align: center;
+}
+li:nth-child(1){
+    padding-left: 20px;
+    width: 50px;
+}
+li:nth-child(2){
+    width: 60px;
+}
+li:nth-child(3){
+    width: 60px;
+}
+li:nth-child(4){
+    width: 60px;
+}
+li:nth-child(5){
+    width: 80px;
+}
+li:nth-child(6){
+    width: 160px;
+}
+li:nth-child(7){
+    width: 80px;
+    padding-right:20px;
+}
+.div1 .first {
+    width: 570px;
+    background-color: #5c56ff;
+    margin: 20px auto;
+}
+.first li {
+    box-sizing: border-box;
+    margin: 0 0;
+    float: left;
+    width: 80px;
+    padding: 0 0px;
+}
+.first li a {
+    display: block;
+    line-height: 38px;
+    text-align: center; 
+    padding: 0 10px;
+    color: #fff;
+}
+.div1 li a:link,.div1 li a:visited {
+    color: #fff;
+}
+.div1 li a:hover {
+    color: #fff;
+    background-color: #78ffb0;
+}
+.div1 button {
+    width: 570px;
+    height: 50px;
+    background-color: #5c56ff;
+}
+.pager li {
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+}

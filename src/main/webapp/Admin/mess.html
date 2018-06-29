@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/showNew.css"/>
+    <link rel="stylesheet" href="../css/mess.css"/>
+    <script type="text/javascript" src="../scripts/jquery-1.12.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#message").bind('input propertychange', function() {
+                if($("#message").val().length > 57){
+                    $(this).val($(this).val().substring(0,58));
+                }
+                var v = $("#message").val();
+                var n = 58 - v.length;
+                $("#surplus").text(n);
+                if (n < 10) {
+                    $("#sum").attr("style","color:red");
+                } else {
+                    $("#sum").removeAttr("style");
+                }
+            })
+
+            $("a").click(function(){
+                return false;
+            })
+
+            $("a").click(function() {
+                $("#messdiv").removeAttr("style");
+            })
+
+            $("#close").click(function(){
+                $("#messdiv").attr("style","display: none");
+            })
+
+            $("#confirm").click(function(){
+                alert($("#message").val());
+                $("#messdiv").attr("style","display: none");
+            })
+        })
+    </script>
+</head>
+<body>
+<a href="#">显示</a><br>
+<a href="#">显示</a><br>
+<a href="#">显示</a><br>
+<a href="#">显示</a><br>
+<div id="messdiv" style="display: none">
+    <div id="mess">
+        <div class="hurdle oh">
+            <p id="close" class="fr">X</p>
+        </div>
+        <div class="content">
+            <h3>通知短信内容:</h3>
+            <textarea id="message"></textarea>
+            <span id="sum" class="fr">58/<span id="surplus">58</span></span>
+        </div>
+        <div class="messbot">
+            <button id="confirm" type="button">确定</button>
+            <button id="cancel" type="button">取消</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

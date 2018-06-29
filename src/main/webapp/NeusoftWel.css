@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("NeusoftImg/headBGimg.png") no-repeat top center;
+    font-size: 12px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.f14 {
+    font-size: 14px;
+}
+.f15 {
+    font-size: 15px;
+}
+.f18 {
+    font-size: 18px;
+}
+.f20 {
+    font-size: 20px;
+}
+.f24 {
+    font-size: 24px;
+}
+.lifl>li{
+    float: left;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.oh {
+    overflow: hidden;
+}
+.head {
+    height: 112px;
+    width: 100%;
+    padding-top: 29px;
+}
+.logo {
+    background: url("NeusoftImg/logo.png") no-repeat center center;
+    background-color: rgba(86, 204, 4, 0.7);
+    display: block;
+    width: 266px;
+    height: 112px;
+}
+.help li {
+    color: white;
+    min-width: 7px;
+}
+.help li a {
+    color: white;
+}
+.seek {
+    margin: 10px 0;
+}
+.seek input {
+    height: 28px;
+    width: 180px;
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 10px;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.4);
+}
+.seek button {
+    width: 27px;
+    height: 27px;
+    background: url("NeusoftImg/sekbutton.png") no-repeat center;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.4);
+    position: relative;
+    left: 190px;
+}
+.nav {
+    margin-top: 20px;
+}
+.nav li {
+    margin-left: 14px;
+}
+.nav a {
+    font-size: 14px;
+    color: white;
+}
+.body {
+    width: 970px;
+    margin: 0 auto;
+}
+.body>.oh:first-child {
+    margin-bottom: 10px;
+}
+.bo1l{
+    width: 220px;
+    height: 235px;
+    background-color: rgba(76,200,0,.5);
+    padding: 15px 25px;
+}
+.bo1l p:first-child{
+    color: white;
+    font-family: "Microsoft YaHei UI";
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.bo1l p {
+    color: #133e00;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.bo1l span {
+    display: inline-block;
+    width: 53px;
+}
+.bo1l input {
+    width: 158px;
+    height: 24px;
+    border: 0px;
+    font-size: 14px;
+}
+.bo1l button {
+    width: 57px;
+    height: 20px;
+    border-radius: 4px;
+    margin-left: 8px;
+    color: white;
+}
+.submit {
+    background-color: #46b305;
+    border: 1px solid #399710;
+}
+.register {
+    background-color: #ff9101;
+    border: 1px solid #b08e06;
+}
+.bo1l a{
+    color: #ff0000;
+    text-decoration: underline;
+}
+.show {
+    height: 265px;
+    width: 700px;
+}
+.show a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("NeusoftImg/show.png") no-repeat center center;
+}
+.intr>li {
+    float: left;
+    margin-right: 10px;
+    width: 235px;
+}
+.intr>li:last-child {
+    margin-right: 0px;
+}
+.intr p {
+    font-size: 16px;
+    font-family: "Microsoft YaHei UI";
+    color: white;
+    background-color: #52d200;
+    line-height: 40px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+.intr div {
+    height: 190px;
+    padding: 10px;
+    background-color: #e9e9ea;
+}
+.intr div div {
+    height: 72px;
+    padding: 0;
+}
+.intr1 {
+    background: url("NeusoftImg/intr1.png") -5px -155px;
+}
+.intr2 {
+    background: url("NeusoftImg/intr2.png") -136px -466px;
+}
+.intr3 {
+    background: url("NeusoftImg/intr2.png") -542px -337px;
+}
+.intr4 {
+    background: url("NeusoftImg/intr2.png") -153px -266px;
+}
+.conlink li {
+    line-height: 38px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.conlink li a {
+    color: #014580;
+}
+.cen {
+    padding: 10px 0;
+    margin: 10px 0;
+    height: 228px;
+    border-top: 1px dotted #014480;
+    border-bottom: 1px dotted #014480;
+}
+.cencon {
+    width: 278px;
+    padding: 4px 26.5px 0 18px;
+}
+.cencon:nth-child(2) {
+    border-right: 1px dotted #014480;
+    border-left: 1px dotted #014480;
+}
+.select>span{
+    display: inline-block;
+    line-height: 23px;
+    padding-left: 6px;
+    width: 54px;
+    height: 23px;
+    border: 1px solid #cccccc;
+}
+.select>.checked{
+    background-color: #52d200;
+    border: 1px solid #4cb10b;
+    color: white;
+}
+.mess p {
+    height: 25px;
+    padding-left: 38px;
+    font-size: 20px;
+    color: #014480;
+    font-family: "Microsoft YaHei UI";
+    background: url("NeusoftImg/icon.png")no-repeat;
+    margin-bottom: 20px;
+}
+.mess>.select {
+    width: 87px;
+}
+.mess>ul {
+    list-style: square outside;
+    width: 190px;
+}
+.mess>ul li {
+    height: 20px;
+}
+.mess>ul span:first-child{
+    line-height: 20px;
+    overflow: hidden;
+    display: inline-block;
+    width: 120px;
+}
+.mess>ul span:last-child{
+    line-height: 20px;
+    overflow: hidden;
+    display: inline-block;
+    width: 70px;
+}
+.mess a,.scenery a{
+    color: #000000;
+}
+.scenery>p {
+    height: 25px;
+    padding-left: 38px;
+    font-size: 20px;
+    color: #015411;
+    font-family: "Microsoft YaHei UI";
+    background: url("NeusoftImg/icon2.png")no-repeat;
+    margin-bottom: 20px;
+}
+.scenery>.select {
+    margin-bottom: 15px;
+}
+.scenery>div>a {
+    width: 83px;
+    height: 57px;
+    display: block;
+    margin-bottom: 13px;
+}
+.scenery>ul {
+    display: block;
+    list-style: square;
+    padding-left: 25px;
+}
+.scenery>ul>li {
+    width: 170px;
+    overflow: hidden;
+    line-height: 21px;
+}
+.enrol>p {
+    height: 25px;
+    padding-left: 38px;
+    font-size: 20px;
+    color: #e96300;
+    font-family: "Microsoft YaHei UI";
+    background: url("NeusoftImg/icon3.png")no-repeat;
+    margin-bottom: 20px;
+}
+.enrol>span {
+    line-height:56px;
+    width: 136px;
+    display: inline-block;
+    font-family: "Microsoft YaHei UI";
+}
+.enrol>span:nth-child(1) {
+    color: #014480;
+}
+.enrol>span:nth-child(2){
+    color: #00c1b1;
+}
+.enrol>span:nth-child(3){
+    color: #710068;
+}
+.enrol>span:nth-child(4){
+    color: #fe0000;
+}
+.enrol>span:nth-child(5){
+    color: #c48f00;
+}
+.enrol>span:nth-child(6){
+    color: #33b500;
+}
+.guide {
+    width: 554px;
+    height: 158px;
+    background: url("NeusoftImg/guide.png") no-repeat center center;
+}
+.guide2 {
+    margin-left: 2px;
+    width: 358px;
+    height: 132px;
+    background-color: #929292;
+    padding: 13px 28px;
+}
+.guide2>p {
+    height: 45px;
+}
+.guide2>p>span {
+    display: inline-block;
+    width: 80px;
+    line-height:45px;
+    font-size: 14px;
+    font-weight: 900;
+}
+.guide2>p>span>a {
+    color: white;
+}
+.guide2>p:first-child>a {
+    line-height: 45px;
+}
+.guide2>p:nth-child(2)>a {
+    line-height: 24px;
+}
+.guide2>p>a {
+    float: left;
+    color: #e2e2e2;
+    margin-right: 20px;
+}
+.cen5 {
+    border-top: 1px dotted #014480;
+    margin-top: 12px;
+    padding: 14px 0;
+}
+.Information {
+    padding-left: 33px;
+    padding-bottom: 14px;
+    width: 405px;
+    border-right: 1px dotted #014480;
+}
+.Information>p{
+    height: 24px;
+    margin-bottom: 14px;
+    font-family: "Microsoft YaHei UI";
+}
+.express {
+    list-style: square;
+    margin-left: 10px;
+}
+.express li {
+    line-height: 22px;
+}
+.express a {
+    color: #000000;
+}
+.express span:first-child {
+    width: 303px;
+}
+.express span:last-child {
+    width: 68px;
+}
+.Express {
+    position: relative;
+    width: 498px;
+    padding-left: 33px;
+    padding-bottom: 14px;
+}
+.Express>p:first-child{
+    height: 24px;
+    margin-bottom: 28px;
+    font-family: "Microsoft YaHei UI";
+}
+.lane a {
+    color: #000;
+    text-align:center;
+}
+.lane li {
+    float: left;
+    height: 90px;
+    width: 50px;
+    margin: 0 7px;
+}
+.lane img {
+    height: 44px;
+    width: 56px;
+    margin-bottom: 16px;
+}
+.direction {
+    top: 67px;
+    left: 26px;
+    position: absolute;
+    width: 470px;
+}
+.direction>.fl {
+    cursor: pointer;
+    background: url("NeusoftImg/toleft.png");
+    width: 9px;
+    height: 11px;
+}
+.direction>.fr {
+    cursor: pointer;
+    background: url("NeusoftImg/toright.png");
+    width: 9px;
+    height: 11px;
+}
+
+.font1 {
+    height: 120px;
+    background-color: #000000;
+}
+.font1 .fl {
+    padding-top: 10px;
+}
+.font1 .fr {
+    padding-top: 25px;
+}
+.font1 ul {
+    padding-left: 24px;
+}
+.font1 li {
+    float: left;
+    color: white;
+    min-width: 7px;
+}
+.font1 a {
+    color: white;
+}
+.font2 {
+    background-color: #3f3f3f;
+    height: 580px;
+}
+.all {
+    padding-top: 7px;
+}
+.all ul{
+    float: left;
+}
+.all ul:last-child li {
+    padding-right: 28px;
+}
+.all li {
+    padding-left: 30px;
+}
+.all li:first-child {
+    font-size: 14px;
+    line-height: 50px;
+    border-bottom: 1px solid #7c7c7c;
+}
+.all ul li:nth-child(2) {
+    padding-top: 14px;
+}
+.all li {
+    overflow: hidden;
+}
+.all li a{
+    line-height: 24px;
+    color: #b2b2b2;
+}
+.all ul li:first-child a{
+    color: white;
+}
+.font2 .mes {
+    margin-top: 12px;
+    border-top: 1px dotted #7c7c7c;
+    padding: 15px 0 0 34px;
+}
+.font2 .mes {
+    color: #b3b3b3;
+}
+.mes span {
+    font-weight: 900;
+    margin-right: 15px;
+    font-family: "Microsoft YaHei UI";
+}
+.mes li {
+    float: left;
+    border-right:1px solid #b3b3b3;
+    padding: 0 6px;
+}
+.mes li a {
+    color: #b3b3b3;
+}

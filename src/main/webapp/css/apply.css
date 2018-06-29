@@ -1,0 +1,166 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    /*设置所有的都是以边框开始计算宽度  百分比*/
+    -webkit-box-sizing: border-box;/*兼容*/
+    box-sizing: border-box;
+}
+body {
+    padding-top: 20px;
+}
+.hidden {
+    display: none;
+}
+.div1 {
+    width: 100%;
+    max-width: 640px;/*设计图的原因  不然它放大*/
+    min-width: 300px;/*为了更好的布局*/
+    margin: 0 auto;
+    text-align: center;
+}
+h1 {
+    width: 300px;
+    margin: 0 auto;
+    background: url("/LibrarySingIn-8/images/logo.png") no-repeat;
+    -webkit-background-size: 60px 60px;
+    background-size: 60px 60px;
+    text-align: center;
+    height: 60px;
+    padding-top: 34px;
+    padding-left: 60px;
+    font-size: 26px;
+}
+.box {
+    display: inline-block;
+    width: 47%;
+    max-width: 100px;
+    height: 30px;
+}
+.radio {
+    position: relative;
+    top: 6px;
+    left: 5px;
+}
+.firstRadio {
+    margin-right: 20px;
+}
+input[type="radio"]:checked + label {
+    background: url("../images/redio.png") no-repeat top left;
+    -webkit-background-size:30px 60px;
+    background-size:30px 60px;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 30px;
+    padding-left: 31px;
+    position: relative;
+    background: url("../images/redio.png") no-repeat bottom left;
+    -webkit-background-size:30px 60px;
+    background-size:30px 60px;
+}
+input[type="radio"] {
+    display: none;
+}
+
+.tar {
+    text-align: right;
+}
+
+.tal {
+    text-align: left;
+}
+
+tr {
+    margin: 10px 0;
+}
+
+.table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.name, .clazz, .phone {
+    border: 1px solid #637aff;
+    background-color: #fafbff;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    padding: 0 10px;
+}
+form {
+    width: 100%;
+    overflow: hidden;
+}
+ul {
+    list-style: none;
+    padding: 10px 0;
+}
+ul li {
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0;
+}
+.classify {
+    float: left;
+    width: 30%;
+    padding: 10px 11px;
+}
+.write {
+    float: left;
+    width: 50%;
+}
+.errorLi {
+    float: left;
+    width: 20%;
+}
+.errorLi li {
+    height: 60px;
+}
+select {
+    border: 1px solid #637aff;
+    background-color: #fafbff;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+}
+.chick {
+    width: 100%;
+    height: 50px;
+    background-color: #99eeff;
+    border: 1px solid #99eeff;
+    border-radius: 5px;
+    font-size: 26px;
+    line-height: 50px;
+    font-weight: 900;
+}
+h2 {
+    width: 300px;
+    margin: 10px auto;
+    margin-top: 30px;
+    background: url("/LibrarySingIn-8/images/correct.png") no-repeat top center;
+    -webkit-background-size:50px 50px;
+    background-size:50px 50px;
+    text-align: center;
+    padding-top: 50px;
+}
+h2 p {
+    font-size: 40px;
+    color: #5c56ff;
+}
+h2 span {
+    font-size: 14px;
+    font-weight:400;
+}
+img {
+    width: 300px;
+}

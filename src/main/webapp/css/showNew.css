@@ -1,0 +1,78 @@
+.chick {
+    background-color: #78ffb0;
+}
+ul {
+    width: 570px;
+    margin: 0 auto;
+    overflow: hidden;
+    list-style: none;
+}
+ul:nth-child(2n+1) {
+    background-color: #A1BED6;
+}
+ul:nth-child(2n) {
+    background-color: #84A9C7;
+}
+ul:nth-child(2){
+    background-color: #7997B7;
+}
+li {
+    float: left;
+    line-height: 20px;
+    margin: 10px 5px;
+    text-align: center;
+}
+li:nth-child(1){
+    padding-left: 20px;
+    width: 50px;
+}
+li:nth-child(2){
+    width: 60px;
+}
+li:nth-child(3){
+    width: 60px;
+}
+li:nth-child(4){
+    width: 60px;
+}
+li:nth-child(5){
+    width: 160px;
+}
+li:nth-child(6){
+    width: 80px;
+    padding-right:20px;
+}
+.div1 .first {
+    width: 570px;
+    background-color: #5c56ff;
+    margin: 20px auto;
+}
+.first li {
+    box-sizing: border-box;
+    margin: 0 0;
+    float: left;
+    width: 80px;
+    padding: 0 0px;
+}
+.first li a {
+    display: block;
+    line-height: 38px;
+    text-align: center; 
+    padding: 0 10px;
+}
+.first li a:link,.first li a:visited {
+    color: #fafbff;
+}
+.first li a:hover {
+    background-color: #78ffb0;
+}
+.div1 button {
+    width: 570px;
+    height: 50px;
+    background-color: #5c56ff;
+}
+.pager li {
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+}

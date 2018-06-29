@@ -1,0 +1,26 @@
+.div1 .first {
+    width: 570px;
+    background-color: #5c56ff;
+    margin: 20px auto;
+    overflow: hidden;
+    list-style: none;
+}
+.first li {
+    box-sizing: border-box;
+    margin: 5px 0;
+    padding: 0 0px;
+    line-height: 20px;
+    text-align: center;
+}
+.first li a {
+    display: block;
+    line-height: 38px;
+    text-align: center;
+    padding: 0 10px;
+}
+.first li a:link,.first li a:visited {
+    color: #fafbff;
+}
+.first li a:hover {
+    background-color: #78ffb0;
+}

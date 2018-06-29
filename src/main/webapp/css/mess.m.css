@@ -1,0 +1,40 @@
+#messdiv {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.27);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#mess{
+    width: 80%;
+    max-width: 450px;
+    min-width: 300px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 14%;
+    padding-bottom: 16px;
+}
+#mess .hurdle {
+    background-color: #eee;
+    padding: 3px 0;
+}
+#mess .hurdle p{
+    width: 40px;
+    font-size: 30px;
+    text-align: center;
+    border-left:1px solid #000;
+    line-height:40px;
+}
+#messdiv .content {
+    padding: 10px 10px;
+}
+#close:hover {
+    cursor: pointer;
+}
+#messdiv .content p {
+    margin: 10px auto;
+    font-size: 20px;
+    font-weight: 800;
+    padding-left: 50px;
+}
